@@ -1,0 +1,59 @@
+//copy reference 
+function square(number) {
+  return number * number;
+}
+function myFunc(theObject) {
+  theObject.make = "Toyota";
+}
+
+const myCar = {
+  make: "Honda",
+  model: "Accord",
+  year: 1998,
+};
+
+console.log(myCar.make); // "Honda"
+myFunc(myCar);
+console.log(myCar.make); // "Toyota"
+
+// array study basic funciton
+function myFunc(theArr) {
+  theArr[0] = 30;
+}
+
+const arr = [45];
+
+console.log(arr[0]); // 45
+myFunc(arr);
+console.log(arr[0]); // 30
+
+// square  and can modify  to cubical 
+function addSquares(a, b) {
+  function square(x) {
+    return x * x;
+  }
+  return square(a) + square(b);
+}
+//basic thing 
+const square = function (number) {
+  return number * number;
+};
+
+console.log(square(4)); // 16
+
+
+// i  stoped here
+function map(f, a) {
+  const result = new Array(a.length);
+  for (let i = 0; i < a.length; i++) {
+    result[i] = f(a[i]);
+  }
+  return result;
+}
+
+const numbers = [0, 1, 2, 5, 10];
+const cubedNumbers = map(function (x) {
+  return x * x * x;
+}, numbers);
+console.log(cubedNumbers); // [0, 1, 8, 125, 1000]
+
