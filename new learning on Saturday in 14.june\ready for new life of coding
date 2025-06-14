@@ -1,0 +1,75 @@
+let qustion ="what is the capital of iraq";
+let answer="bagdad";
+while(true){
+    let userAnswer=prompt(qustion);
+    if(userAnswer==null || userAnswer=="" ){
+        alert("something is wrong please use the correct answer");
+        break;
+    }
+    if(userAnswer==answer){
+        alert("correct answer");
+        console.log("everything is good inshallah");
+    }
+    else {
+        alert("wrong answer");
+        console.log("your question is wrong becarefull");
+    }
+};
+let food = "banana";
+let mood = "happy";
+console.log(`If I eat ${food}, I feel ${mood}`);
+
+// countdown
+
+let input = prompt("Enter a positive number:");
+
+if (input === null || input.trim() === "" || isNaN(input) || Number(input) < 0) {
+  console.log("CANCEL or invalid input");
+} else {
+  let count = Number(input);
+  while (count >= 0) {
+    console.log(count);
+    count--;
+  }
+  console.log("Countdown finished!");
+}
+
+let string="";
+let isRight =null;
+let number=0;
+if(string)console.log("false");
+if(isRight) console.log("your wrong");
+if(number)console.log(" agian wrong")
+if(array) ===true
+if(obj) ===true;
+let t = prompt("Enter a number: ");
+let kk = Number(t);
+
+if (isNaN(kk) || kk <= 0) {
+  console.log("Please enter a valid positive number.");
+} else {
+  for (let k = kk - 1; k > 0; --k) {
+    console.log(`Multiplication between ${kk} and ${k} is ${kk * k}`);
+  }
+}
+// result of age
+let yourAge=prompt("inter your age");
+let numberOfAge=Number(yourAge);
+function resultOfAge(){
+if(yourAge !== null || yourAge !== undefined || yourAge!==""|| you<=0){
+    console.log(numberOfAge*365*12)
+console.log("everything will be good in shalla be happy" ,numberOfAge)
+    
+    
+}
+else{
+    console.log("invalid input")
+}
+return 
+};
+resultOfAge();
+
+
+
+
+
