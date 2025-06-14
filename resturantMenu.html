@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Delicious Food Menu</title>
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .menu-card {
+      background: white;
+      max-width: 400px;
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+      padding: 30px;
+      text-align: center;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: #ff6f61;
+      margin-bottom: 25px;
+      letter-spacing: 2px;
+      animation: slideIn 0.8s ease forwards;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px 0;
+      margin: 12px 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      color: white;
+      background: linear-gradient(90deg, #ff6f61, #de4313);
+      box-shadow: 0 8px 15px rgba(222, 67, 19, 0.4);
+      transition: all 0.3s ease;
+      user-select: none;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #de4313, #ff6f61);
+      box-shadow: 0 12px 20px rgba(222, 67, 19, 0.6);
+      transform: translateY(-3px);
+    }
+
+    button:active {
+      transform: translateY(1px);
+      box-shadow: 0 6px 10px rgba(222, 67, 19, 0.3);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 2rem;
+      }
+
+      button {
+        font-size: 1rem;
+        padding: 12px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-card">
+    <h2>Choose Your Food</h2>
+    <button onclick="chooseMenu(1)">🍕 Pizza</button>
+    <button onclick="chooseMenu(2)">🍔 Burger</button>
+    <button onclick="chooseMenu(3)">🥗 Salad</button>
+    <button onclick="chooseMenu(4)">🍝 Pasta</button>
+  </div>
+
+  <script>
+    function chooseMenu(choice) {
+      switch(choice) {
+        case 1:
+          alert("🍕 You chose Pizza!");
+          break;
+        case 2:
+          alert("🍔 You chose Burger!");
+          break;
+        case 3:
+          alert("🥗 You chose Salad!");
+          break;
+        case 4:
+          alert("🍝 You chose Pasta!");
+          break;
+        default:
+          alert("❌ Invalid choice");
+      }
+    }
+  </script>
+</body>
+</html>
