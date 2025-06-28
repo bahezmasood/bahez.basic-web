@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+  }
+  
+  input[type="text"] {
+    width: 75%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+  }
+  
+  li {
+    background-color: #2c2c2c;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  li.checked {
+    text-decoration: line-through;
+    color: #999;
+    opacity: 0.7;
+  }
+  
+  li span {
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  </style>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+</head>
+    <body>
+       <div class="container">
+        <div class="row">
+            <img id="img" src="" alt="">
+<div class="row">
+<input type="text" id="inputList">
+<button onclick="addtask()" id="button" type="button"></button>
+</div>
+<ul class="ListContainer">
+</ul>
+        </div>
+       </div> 
+       <script src="script.js">
+let ListContainer=document.getElementById(".ListContainer");
+ListContainer.addEventListener("click",function(e){
+if(e.target.tagname===("li")){
+    e.target.classList.toggle("checked");
+    saveData();
+}
+else if(e.target.tagName===("span")){
+    e.target.parentElement.remove();
+    saveData();
+}
+},false)
+function saveData(){
+    localStorage.setItem("data",ListContainer.innerHTML)
+}
+function showTask(){
+    ListContainer.innerHtml=localStorage.getItem("data")
+}
+showTask()</script>
+    </body>
+
+</html>
